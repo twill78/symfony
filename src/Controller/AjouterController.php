@@ -26,6 +26,7 @@ class AjouterController extends AbstractController
             $chats = $repo->findAll();
             return $this->redirectToRoute('app_home', ['chats'=>$chats]);
         }
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
         return $this->render('chats/addChat.html.twig');
     }
 }

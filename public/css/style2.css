@@ -116,3 +116,9 @@ h3 {
     box-shadow: none;
     cursor: pointer;
 }
+
+.login {
+    position: fixed;
+    right: 20px;
+    top: 200px;
+}
