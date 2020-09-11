@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ parent() }} - Liste des chats{% endblock %}
+{% block body %}
+        <div class="" style="width:30vw">
+            <form method="POST">
+                <h2>Ajouter un chat</h2>
+                <div class="">
+                    <label for="nom">Nom</label>
+                    <input type="text" name="nom" placeholder="Nom">
+                </div>
+                <div>
+                    <label for="race">Race</label>
+                    <input type="text" name="race" placeholder="Race">
+                </div>
+                <div>
+                    <select class="" name="sexe">
+                        <option>Sexe</option>
+                        <option>M</option>
+                        <option>F</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="naissance">Date de naissance</label>
+                    <input type="date" name="naissance">
+                </div>
+                <div>
+                    <label for="caractere">Caractere</label>
+                    <textarea name="caractere" rows="4"></textarea>
+                </div>
+                <div>
+                    <label for="photo">Photo</label>
+                    <input type="text" name="photo" placeholder="photo">
+                </div>
+                <div>
+                    <label for="recueil">Date de recueil</label>
+                    <input type="date" name="recueil">
+                </div>
+                <div>
+                    <button type="submit" href="/">Submit</button>
+                </div>
+            </form>
+            </div>
+        </div>
+{% endblock %}

@@ -52,6 +52,8 @@ class Chat
      */
     private $dateRecueil;
 
+    private $age;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -141,12 +143,24 @@ class Chat
         return $this;
     }
 
-    public function calculeAge()
+    public function getAge()
     {
         $now = new \DateTime('now');
         $naissance = $this->getDateNaissance();
         $diff = $now->diff($naissance);
 
+        $this->age = $diff->format('%y ans, %m mois');
+
         return $diff->format('%y ans, %m mois');
     }
+
+    public function __construct($nom,$race,$sexe, $dateNaissance,$caractere,$photo,$dateRecueil){
+        $this->setNom($nom);
+        $this->setRace($race);
+        $this->setSexe($sexe);
+        $this->setDateNaissance($dateNaissance);
+        $this->setCaractere($caractere);
+        $this->setPhoto($photo);
+        $this->setDateRecueil($dateRecueil);
+     }
 }

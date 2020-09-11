@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ parent() }} - Recherche{% endblock %}
+{% block body %}
+        <h2>RECHERCHE</h2>
+        <div class="container-base">
+            <hr />
+            <h3>Recherche par sexe</h3>
+            <form method="post">
+            <label for="sexe">Recherche par sexe :</label>
+            <select id="sexe" name="sexe">
+                <option value="">-- Choisissez --</option>
+                <option value="F">Femelle</option>
+                <option value="M">Mâle</option>
+            </select>
+            <br />
+            <input type="submit" value="ok">
+            </form>
+            <hr />
+            <h3>Recherche par race</h3>
+            <form method="post">
+            <label for="race">Recherche par race :</label>
+            <select id="race" name="race">
+                <option value="">-- Choisissez --</option>
+                <option value="Scottish Fold">Scottish Fold</option>
+                <option value="Norvégien">Norvégien</option>
+                <option value="Européen">Européen</option>
+                <option value="Bengale">Bengale</option>
+                <option value="Chartreux">Chartreux</option>
+            </select>
+            <br />
+            <input type="submit" value="ok">
+            </form>
+            <hr />
+        </div>
+{% endblock %}
