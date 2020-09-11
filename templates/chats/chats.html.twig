@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ parent() }} - Liste des chats{% endblock %}
+{% block body %}
+        <h2>LISTE DES CHATS</h2>
+        <div class="container-chat">
+        {% for chat in chats %}
+            <div>
+                <div class="img-chat" style="background-image: url('{{ chat.photo }}');">&nbsp;</div>
+                <div class="item">
+                    <h3>{{ chat.nom }}</h3>
+                        <li class="catli">Sexe : {{ chat.sexe }}</li>
+                        <li class="catli">Race : {{ chat.race }}</li>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+{% endblock %}
